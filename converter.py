@@ -25,18 +25,21 @@ def process_excel_files(input_directory, output_csv):
             # Convert timepoint to the appropriate format
             if timepoint == 0.0:
                 deut_time = "0 sec"
-            elif 0.0 < timepoint <= 0.34:
+            elif 0.0 < timepoint < 1.0:
                 deut_time = "20 sec"
-            elif 1.0 <= timepoint < 3.0:
+            elif 1.0 <= timepoint < 6.0:
                 deut_time = f"{int(math.floor(timepoint))} min"
-            elif 3.0 <= timepoint < 6.0:
-                deut_time = "5 min"
-            elif 6.0 <= timepoint < 30.0:
-                deut_time = "30 min"
+            elif 6.0 <= timepoint < 11.0:
+                deut_time = "10 min"
+            elif 11.0 <= timepoint < 30.0:
+                deut_time = "20 min"
             elif 30.0 <= timepoint < 60.0:
+                deut_time = "30 min"
+            elif 60.0 <= timepoint < 240.0:
                 deut_time = "1 hour"
             else:
                 deut_time = "3 hour"
+                
 
             # Create dummy data and extract required values
             row_data = {
