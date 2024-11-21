@@ -1,0 +1,3 @@
+- Open your terminal: Cmd + Space and type "Terminal"
+- Type `cd hxexpress-to-hdexaminer`
+- Type `./run_script.sh`
