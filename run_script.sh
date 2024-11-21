@@ -13,7 +13,7 @@ else
 fi
 
 # Run the Python script
-if [ -f "script.py" ]; then
+if [ -f "converter.py" ]; then
     python converter.py
     echo "Script executed successfully."
 else
