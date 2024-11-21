@@ -14,7 +14,7 @@ fi
 
 # Run the Python script
 if [ -f "script.py" ]; then
-    python script.py
+    python converter.py
     echo "Script executed successfully."
 else
     echo "Error: script.py not found in the directory."
